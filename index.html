@@ -38,7 +38,7 @@
       <div id="date"></div>
     </div>
     <script type="text/javascript">
-      (function() {
+      (function(window, document) {
         var toIso = function(d) {
           var pad = function(number) {
             if (number < 10) {
@@ -60,7 +60,7 @@
         };
         f();
         window.setInterval(f, 1000);
-      })();
+      })(this, this.document);
     </script>
   </body>
 </html>
