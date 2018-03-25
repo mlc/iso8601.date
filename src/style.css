@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url('pt-sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'PT Sans';
+  color: #111;
+  background-color: #ddd;
+}
+#wrapper {
+  min-height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+#date {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0%, -50%);
+  text-align: center;
+  font-size: 7vw;
+}
