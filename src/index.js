@@ -1,25 +1,19 @@
 "use strict";
 
+import { use as jsJodaUse, ChronoUnit, ZonedDateTime, ZoneId } from 'js-joda';
+import jsJodaTimezone from 'js-joda-timezone';
 import './style.css';
 
-var toIso = function(d) {
-  var pad = function(number) {
-    if (number < 10) {
-      return '0' + number;
-    }
-    return number;
-  };
-  return d.getUTCFullYear() +
-  '-' + pad(d.getUTCMonth() + 1) +
-  '-' + pad(d.getUTCDate()) +
-  'T' + pad(d.getUTCHours()) +
-  ':' + pad(d.getUTCMinutes()) +
-  ':' + pad(d.getUTCSeconds()) +
-  'Z';
-}
-var date = document.getElementById('date');
-var f = function() {
-  date.textContent = toIso(new Date());
+jsJodaUse(jsJodaTimezone);
+const { SECONDS } = ChronoUnit;
+
+let tz = ZoneId.UTC;
+
+const date = document.getElementById('date');
+
+const f = () => {
+  date.textContent = ZonedDateTime.now(tz).truncatedTo(SECONDS).toString();
 };
+
 f();
 window.setInterval(f, 1000);
