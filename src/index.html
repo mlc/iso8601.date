@@ -8,5 +8,21 @@
     <div id="wrapper">
       <div id="date"></div>
     </div>
+    <form id="settings-wrapper">
+      <span id="settings">
+        <span class="setting-zone" id="setting-utc">
+          <input type="radio" name="zone" id="zone-utc" value="UTC" checked>
+          <label for="zone-utc"><abbr title="Coordinated Universal Time">UTC</abbr></label>
+        </span>
+        <span class="setting-zone" id="setting-local">
+          <input type="radio" name="zone" id="zone-local" value="local">
+          <label for="zone-local"></label>
+        </span>
+        <span class="setting-zone" id="setting-custom">
+          <input type="radio" name="zone" id="zone-custom" value="custom">
+          <label for="zone-custom"><select id="custom-zone-selector" name="custom-zone"></select></label>
+        </span>
+      </span>
+    </div>
   </body>
 </html>

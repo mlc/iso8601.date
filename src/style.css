@@ -4,19 +4,28 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-famil: 'Space Mono';
+  src: url('space-mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 html, body {
   height: 100%;
   padding: 0px;
   margin: 0px;
+}
+body {
   font-family: 'PT Sans';
   color: #111;
   background-color: #ddd;
 }
+body.beats {
+  background-color: #333;
+}
 #wrapper {
   min-height: 100%;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
 }
 #date {
   position: absolute;
@@ -25,4 +34,25 @@ html, body {
   transform: translate(0%, -50%);
   text-align: center;
   font-size: 7vw;
+}
+body.beats #date {
+  color: #9d0;
+  font-family: 'Space Mono', monospace;
+  font-size: 20vw;
+}
+#settings-wrapper {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #111;
+  padding: 4px 0px;
+  font-size: 10pt;
+}
+#settings {
+  margin: 0px 8px;
+}
+.setting-zone {
+  margin: 0px 8px;
 }

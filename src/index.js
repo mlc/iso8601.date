@@ -11,9 +11,50 @@ let tz = ZoneId.UTC;
 
 const date = document.getElementById('date');
 
-const f = () => {
-  date.textContent = ZonedDateTime.now(tz).truncatedTo(SECONDS).toString();
+const updateDisplay = () => {
+  date.textContent = ZonedDateTime.now(tz).truncatedTo(SECONDS).withFixedOffsetZone().toString();
 };
 
-f();
-window.setInterval(f, 1000);
+const localZone = ZoneId.systemDefault();
+const localSetting = document.getElementById('setting-local');
+if (localZone) {
+  localSetting.getElementsByTagName('label')[0].textContent = localZone.id();
+} else {
+  localSetting.parentNode.removeChild(localSetting);
+}
+
+const zoneNames = [...ZoneId.getAvailableZoneIds()].sort((a, b) => a.localeCompare(b));
+const customZoneSelector = document.getElementById("custom-zone-selector");
+zoneNames.forEach(zone => {
+  const elt = document.createElement('option');
+  elt.textContent = zone;
+  elt.setAttribute('value', zone);
+  customZoneSelector.appendChild(elt);
+});
+
+const formElements = document.getElementById("settings-wrapper");
+const updateZone = () => {
+  const value = formElements["zone"].value;
+  if (value === 'UTC') {
+    tz = ZoneId.UTC;
+  } else if (value === 'local') {
+    tz = localZone;
+  } else if (value === 'custom') {
+    tz = ZoneId.of(formElements["custom-zone"].value);
+  }
+  updateDisplay();
+};
+
+customZoneSelector.addEventListener('change', () => {
+  formElements["zone"].value = 'custom';
+  updateZone();
+});
+
+[...document.querySelectorAll(".setting-zone input[type='radio']")].forEach(elt =>
+  elt.addEventListener("change", updateZone)
+);
+
+updateZone();
+updateDisplay();
+
+window.setInterval(updateDisplay, 1000);

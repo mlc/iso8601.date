@@ -7,7 +7,8 @@
   "author": "mike castleman <m@mlcastle.net>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open",
+    "dev": "webpack --mode development",
     "prod": "webpack --mode production"
   },
   "devDependencies": {
