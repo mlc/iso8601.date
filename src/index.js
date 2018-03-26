@@ -1,18 +1,30 @@
 "use strict";
 
-import { use as jsJodaUse, ChronoUnit, ZonedDateTime, ZoneId } from 'js-joda';
+import { use as jsJodaUse, ChronoUnit, LocalTime, ZonedDateTime, ZoneId, ZoneOffset } from 'js-joda';
 import jsJodaTimezone from 'js-joda-timezone';
+
 import './style.css';
 
 jsJodaUse(jsJodaTimezone);
 const { SECONDS } = ChronoUnit;
 
 let tz = ZoneId.UTC;
+let beats = false;
+let intervalId;
 
 const date = document.getElementById('date');
 
 const updateDisplay = () => {
-  date.textContent = ZonedDateTime.now(tz).truncatedTo(SECONDS).withFixedOffsetZone().toString();
+  let time;
+  if (beats) {
+    const beats = LocalTime.now(tz).toNanoOfDay() / 86400000000;
+    const beatStr = beats.toFixed(2);
+    const zeroes = (beatStr.length === 4) ? '00' : (beatStr.length === 5) ? '0' : '';
+    time = `@${zeroes}${beatStr}`;
+  } else {
+    time = ZonedDateTime.now(tz).truncatedTo(SECONDS).withFixedOffsetZone().toString();
+  }
+  date.textContent = time;
 };
 
 const localZone = ZoneId.systemDefault();
@@ -32,15 +44,37 @@ zoneNames.forEach(zone => {
   customZoneSelector.appendChild(elt);
 });
 
+const startInterval = ms => {
+  if (typeof intervalId !== 'undefined') {
+    window.clearInterval(intervalId);
+  }
+  intervalId = window.setInterval(updateDisplay, ms);
+}
+
 const formElements = document.getElementById("settings-wrapper");
 const updateZone = () => {
   const value = formElements["zone"].value;
+  const oldBeats = beats;
   if (value === 'UTC') {
     tz = ZoneId.UTC;
+    beats = false;
   } else if (value === 'local') {
     tz = localZone;
+    beats = false;
   } else if (value === 'custom') {
     tz = ZoneId.of(formElements["custom-zone"].value);
+    beats = false;
+  } else if (value === 'beats') {
+    tz = ZoneOffset.ofHours(1);
+    beats = true;
+  }
+  if (beats !== oldBeats || typeof intervalId === 'undefined') {
+    startInterval(beats ? 864 : 1000);
+  }
+  if (beats) {
+    document.body.classList.add('beats');
+  } else {
+    document.body.classList.remove('beats');
   }
   updateDisplay();
 };
@@ -55,6 +89,3 @@ customZoneSelector.addEventListener('change', () => {
 );
 
 updateZone();
-updateDisplay();
-
-window.setInterval(updateDisplay, 1000);
