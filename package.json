@@ -9,7 +9,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+    "pretty": "prettier --write src/index.js"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
