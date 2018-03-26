@@ -12,7 +12,7 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].[chunkhash].css",
       chunkFilename: "[id].[chunkhash].css"
     })
   ],
