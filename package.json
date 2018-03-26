@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "js-joda": "^1.8.2",
-    "js-joda-timezone": "^1.2.1"
+    "js-joda-timezone": "^1.2.1",
+    "lodash.isundefined": "^3.0.1"
   }
 }
