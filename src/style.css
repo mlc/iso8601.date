@@ -5,7 +5,7 @@
   font-style: normal;
 }
 @font-face {
-  font-famil: 'Space Mono';
+  font-family: 'Space Mono';
   src: url('space-mono.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -56,4 +56,9 @@ body.beats #date {
 .setting-zone {
   margin: 0px 8px 0px 0px;
   white-space: nowrap;
+}
+select, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }

@@ -16,7 +16,6 @@ import backwards from './backwards';
 import './style.css';
 
 jsJodaUse(jsJodaTimezone);
-const { SECONDS } = ChronoUnit;
 
 const extraBackwards = [
   'US/Pacific-New',
@@ -50,7 +49,7 @@ const setup = () => {
       time = `@${zeroes}${beatStr}`;
     } else {
       time = ZonedDateTime.now(tz)
-        .truncatedTo(SECONDS)
+        .truncatedTo(ChronoUnit.SECONDS)
         .withFixedOffsetZone()
         .toString();
     }
