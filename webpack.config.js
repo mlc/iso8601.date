@@ -24,7 +24,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader", options: { minimize: true } },
+          "postcss-loader"
+        ],
       },
       {
         test: /\.(woff2?|ttf|eot)$/,
