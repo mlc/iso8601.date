@@ -1,6 +1,5 @@
 'use strict';
 
-import isUndefined from 'lodash.isundefined';
 import {
   use as jsJodaUse,
   ChronoUnit,
@@ -10,11 +9,29 @@ import {
   ZoneOffset,
 } from 'js-joda';
 import jsJodaTimezone from 'js-joda-timezone';
+import difference from 'lodash.difference';
+import isUndefined from 'lodash.isundefined';
 
+import backwards from './backwards';
 import './style.css';
 
 jsJodaUse(jsJodaTimezone);
 const { SECONDS } = ChronoUnit;
+
+const extraBackwards = [
+  'US/Pacific-New',
+  'WET',
+  'CET',
+  'MET',
+  'EET',
+  'EST',
+  'MST',
+  'HST',
+  'EST5EDT',
+  'CST6CDT',
+  'MST7MDT',
+  'PST8PDT',
+];
 
 const setup = () => {
   let tz = ZoneId.UTC;
@@ -48,9 +65,11 @@ const setup = () => {
     localSetting.parentNode.removeChild(localSetting);
   }
 
-  const zoneNames = [...ZoneId.getAvailableZoneIds()].sort((a, b) =>
-    a.localeCompare(b)
-  );
+  const zoneNames = difference(
+    ZoneId.getAvailableZoneIds(),
+    backwards,
+    extraBackwards
+  ).sort((a, b) => a.localeCompare(b));
   const customZoneSelector = document.getElementById('custom-zone-selector');
   zoneNames.forEach(zone => {
     const elt = document.createElement('option');
