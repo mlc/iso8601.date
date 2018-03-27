@@ -2414,6 +2414,12 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+floreal@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/floreal/-/floreal-1.1.1.tgz#916f527cc93ca1821ef5e63f4e9b9652c39573da"
+  dependencies:
+    roman-numerals "^0.3.2"
+
 flow-parser@^0.*:
   version "0.68.0"
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.68.0.tgz#9cc96620a102e316a314b6bcd56205ceace862d8"
@@ -3647,6 +3653,10 @@ lodash.camelcase@^4.3.0:
 lodash.difference@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.difference/-/lodash.difference-4.5.0.tgz#9ccb4e505d486b91651345772885a2df27fd017c"
+
+lodash.floor@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.floor/-/lodash.floor-4.0.4.tgz#11401c54238723fb4d618be752e4d96eb3fcab54"
 
 lodash.isundefined@^3.0.1:
   version "3.0.1"
@@ -5318,6 +5328,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^2.0.0"
     inherits "^2.0.1"
+
+roman-numerals@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/roman-numerals/-/roman-numerals-0.3.2.tgz#907ddf90c64e1b5dce8ed5e8fb0718318f2f26e6"
 
 run-async@^2.0.0, run-async@^2.2.0:
   version "2.3.0"

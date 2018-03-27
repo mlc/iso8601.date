@@ -13,6 +13,7 @@ import difference from 'lodash.difference';
 import isUndefined from 'lodash.isundefined';
 
 import backwards from './backwards';
+import { paris, now as republicanNow } from './republican';
 import './style.css';
 
 jsJodaUse(jsJodaTimezone);
@@ -35,6 +36,7 @@ const extraBackwards = [
 const setup = () => {
   let tz = ZoneId.UTC;
   let beats = false;
+  let republican = false;
   let intervalId;
 
   const date = document.getElementById('date');
@@ -47,13 +49,19 @@ const setup = () => {
       const zeroes =
         beatStr.length === 4 ? '00' : beatStr.length === 5 ? '0' : '';
       time = `@${zeroes}${beatStr}`;
+    } else if (republican) {
+      time = republicanNow().join('<br>');
     } else {
       time = ZonedDateTime.now(tz)
         .truncatedTo(ChronoUnit.SECONDS)
         .withFixedOffsetZone()
         .toString();
     }
-    date.textContent = time;
+    if (republican) {
+      date.innerHTML = time;
+    } else {
+      date.textContent = time;
+    }
   };
 
   const localZone = ZoneId.systemDefault();
@@ -87,22 +95,31 @@ const setup = () => {
   const formElements = document.getElementById('settings-wrapper');
   const updateZone = () => {
     const value = formElements['zone'].value;
-    const oldBeats = beats;
+    const old864 = beats || republican;
+
     if (value === 'UTC') {
       tz = ZoneId.UTC;
       beats = false;
+      republican = false;
     } else if (value === 'local') {
       tz = localZone;
       beats = false;
+      republican = false;
     } else if (value === 'custom') {
       tz = ZoneId.of(formElements['custom-zone'].value);
       beats = false;
+      republican = false;
     } else if (value === 'beats') {
       tz = ZoneOffset.ofHours(1);
       beats = true;
+      republican = false;
+    } else if (value === 'republican') {
+      tz = paris;
+      beats = false;
+      republican = true;
     }
-    if (beats !== oldBeats || isUndefined(intervalId)) {
-      startInterval(beats ? 864 : 1000);
+    if ((beats || republican) !== old864 || isUndefined(intervalId)) {
+      startInterval((beats || republican) ? 864 : 1000);
     }
     if (beats) {
       document.body.classList.add('beats');
