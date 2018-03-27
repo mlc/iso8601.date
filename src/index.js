@@ -58,7 +58,7 @@ const setup = () => {
 
   const localZone = ZoneId.systemDefault();
   const localSetting = document.getElementById('setting-local');
-  if (localZone) {
+  if (localZone && localZone.id() !== 'SYSTEM') {
     localSetting.getElementsByTagName('label')[0].textContent = localZone.id();
   } else {
     localSetting.parentNode.removeChild(localSetting);
