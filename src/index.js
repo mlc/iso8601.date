@@ -119,7 +119,7 @@ const setup = () => {
       republican = true;
     }
     if ((beats || republican) !== old864 || isUndefined(intervalId)) {
-      startInterval((beats || republican) ? 864 : 1000);
+      startInterval(beats || republican ? 864 : 1000);
     }
     if (beats) {
       document.body.classList.add('beats');
