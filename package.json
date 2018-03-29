@@ -10,7 +10,8 @@
     "start": "webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
-    "pretty": "prettier --write src/*.js"
+    "pretty": "prettier --write src/*.js",
+    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
@@ -39,8 +40,5 @@
     "lodash.difference": "^4.5.0",
     "lodash.floor": "^4.0.4",
     "lodash.isundefined": "^3.0.1"
-  },
-  "scripts": {
-    "precommit": "pretty-quick --staged"
   }
 }
