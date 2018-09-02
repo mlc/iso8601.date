@@ -1,8 +1,13 @@
 'use strict';
 
 import {
+  ChronoField,
   ChronoUnit,
+  DateTimeFormatter,
+  DateTimeFormatterBuilder,
+  IsoChronology,
   LocalTime,
+  ResolverStyle,
   ZonedDateTime,
   ZoneId,
   ZoneOffset,
@@ -30,6 +35,18 @@ const extraBackwards = [
   'PST8PDT',
 ];
 
+const fmt = new DateTimeFormatterBuilder()
+  .append(DateTimeFormatter.ISO_LOCAL_DATE)
+  .appendLiteral('T')
+  .appendValue(ChronoField.HOUR_OF_DAY, 2)
+  .appendLiteral(':')
+  .appendValue(ChronoField.MINUTE_OF_HOUR, 2)
+  .appendLiteral(':')
+  .appendValue(ChronoField.SECOND_OF_MINUTE, 2)
+  .appendOffsetId()
+  .toFormatter(ResolverStyle.STRICT)
+  .withChronology(IsoChronology.INSTANCE);
+
 const setup = () => {
   let tz = ZoneId.UTC;
   let beats = false;
@@ -49,10 +66,7 @@ const setup = () => {
     } else if (republican) {
       time = republicanNow().join('<br>');
     } else {
-      time = ZonedDateTime.now(tz)
-        .truncatedTo(ChronoUnit.SECONDS)
-        .withFixedOffsetZone()
-        .toString();
+      time = fmt.format(ZonedDateTime.now(tz));
     }
     if (republican) {
       date.innerHTML = time;
