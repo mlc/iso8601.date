@@ -1,22 +1,19 @@
 'use strict';
 
 import {
-  use as jsJodaUse,
   ChronoUnit,
   LocalTime,
   ZonedDateTime,
   ZoneId,
   ZoneOffset,
 } from 'js-joda';
-import jsJodaTimezone from 'js-joda-timezone';
+import 'js-joda-timezone';
 import difference from 'lodash.difference';
 import isUndefined from 'lodash.isundefined';
 
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
 import './style.css';
-
-jsJodaUse(jsJodaTimezone);
 
 const extraBackwards = [
   'US/Pacific-New',
