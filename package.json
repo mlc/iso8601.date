@@ -14,10 +14,11 @@
     "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^8.2.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-loader": "^8.0.0",
     "base64-inline-loader": "^1.1.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
@@ -34,6 +35,7 @@
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.5",
     "floreal": "^1.1.1",
     "js-joda": "1.9.1",
     "js-joda-timezone": "2.0.1",
