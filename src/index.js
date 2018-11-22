@@ -1,8 +1,5 @@
-'use strict';
-
 import {
   ChronoField,
-  ChronoUnit,
   DateTimeFormatter,
   DateTimeFormatterBuilder,
   IsoChronology,
@@ -55,14 +52,23 @@ const setup = () => {
 
   const date = document.getElementById('date');
 
+  const padBeats = beatStr => {
+    switch (beatStr.length) {
+      case 4:
+        return `00${beatStr}`;
+      case 5:
+        return `0${beatStr}`;
+      default:
+        return beatStr;
+    }
+  };
+
   const updateDisplay = () => {
     let time;
     if (beats) {
-      const beats = LocalTime.now(tz).toNanoOfDay() / 86400000000;
-      const beatStr = beats.toFixed(2);
-      const zeroes =
-        beatStr.length === 4 ? '00' : beatStr.length === 5 ? '0' : '';
-      time = `@${zeroes}${beatStr}`;
+      const beatsNow = LocalTime.now(tz).toNanoOfDay() / 86400000000;
+      const beatStr = beatsNow.toFixed(2);
+      time = `@${padBeats(beatStr)}`;
     } else if (republican) {
       time = republicanNow().join('<br>');
     } else {
@@ -105,7 +111,7 @@ const setup = () => {
 
   const formElements = document.getElementById('settings-wrapper');
   const updateZone = () => {
-    const value = formElements['zone'].value;
+    const { value } = formElements.zone;
     const old864 = beats || republican;
 
     if (value === 'UTC') {
@@ -141,7 +147,7 @@ const setup = () => {
   };
 
   customZoneSelector.addEventListener('change', () => {
-    formElements['zone'].value = 'custom';
+    formElements.zone.value = 'custom';
     updateZone();
   });
 
