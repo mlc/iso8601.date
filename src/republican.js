@@ -1,6 +1,6 @@
 import { Date as Floreal } from 'floreal';
 import { LocalDateTime, ZoneOffset } from 'js-joda';
-import floor from 'lodash.floor';
+import floor from 'lodash/floor';
 
 export const paris = ZoneOffset.ofHoursMinutesSeconds(0, 9, 21);
 

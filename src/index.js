@@ -10,8 +10,8 @@ import {
   ZoneOffset,
 } from 'js-joda';
 import 'js-joda-timezone';
-import difference from 'lodash.difference';
-import isUndefined from 'lodash.isundefined';
+import difference from 'lodash/difference';
+import isUndefined from 'lodash/isUndefined';
 
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
