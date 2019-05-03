@@ -48,7 +48,7 @@
     "@babel/runtime": "^7.1.5",
     "floreal": "^1.1.1",
     "js-joda": "1.9.1",
-    "js-joda-timezone": "2.0.2",
+    "js-joda-timezone": "2.0.1",
     "lodash": "^4.17.11"
   },
   "husky": {
