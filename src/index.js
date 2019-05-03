@@ -14,6 +14,7 @@ import difference from 'lodash/difference';
 import isUndefined from 'lodash/isUndefined';
 
 import backwards from './backwards';
+import gauges from './gauges';
 import { paris, now as republicanNow } from './republican';
 import './style.css';
 
@@ -167,3 +168,5 @@ if (
 } else {
   document.addEventListener('DOMContentLoaded', setup);
 }
+
+gauges();
