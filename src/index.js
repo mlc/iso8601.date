@@ -151,8 +151,8 @@ const setup = () => {
     updateZone();
   });
 
-  [...document.querySelectorAll(".setting-zone input[type='radio']")].forEach(
-    elt => elt.addEventListener('change', updateZone)
+  [...document.querySelectorAll("#settings input[type='radio']")].forEach(elt =>
+    elt.addEventListener('change', updateZone)
   );
 
   updateZone();

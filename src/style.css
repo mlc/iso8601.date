@@ -40,19 +40,22 @@ body.beats #date {
   font-size: 20vw;
 }
 #settings-wrapper {
-  display: block;
-  background-color: #fff;
-  width: 100%;
-  border-top: 1px solid #111;
-  padding: 4px 0px;
-  font-size: 10pt;
+  align-self: stretch;
 }
 #settings {
-  margin: 0px 8px;
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid #111;
+  padding: 4px;
+  font-size: 10pt;
+  margin: 0px;
+  flex-direction: horizontal;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
 }
-.setting-zone {
-  margin: 0px 8px 0px 0px;
-  white-space: nowrap;
+#settings li {
+  margin: 0px 4px;
 }
 select,
 option {
