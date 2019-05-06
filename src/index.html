@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>iso8601.date</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div id="wrapper">
-      <div id="date"></div>
-      <div id="time"></div>
-    </div>
+    <div class="spacer"></div>
+    <div id="date"></div>
+    <div id="time"></div>
+    <div class="spacer"></div>
     <form id="settings-wrapper">
       <div id="settings">
         <span class="setting-zone" id="setting-utc">
-          <input type="radio" name="zone" id="zone-utc" value="UTC" checked>
-          <label for="zone-utc"><abbr title="Coordinated Universal Time">UTC</abbr></label>
+          <input type="radio" name="zone" id="zone-utc" value="UTC" checked />
+          <label for="zone-utc"
+            ><abbr title="Coordinated Universal Time">UTC</abbr></label
+          >
         </span>
         <span class="setting-zone" id="setting-local">
-          <input type="radio" name="zone" id="zone-local" value="local">
+          <input type="radio" name="zone" id="zone-local" value="local" />
           <label for="zone-local"></label>
         </span>
         <span class="setting-zone" id="setting-custom">
-          <input type="radio" name="zone" id="zone-custom" value="custom">
+          <input type="radio" name="zone" id="zone-custom" value="custom" />
           <select id="custom-zone-selector" name="custom-zone"></select>
         </span>
         <span class="setting-zone" id="setting-beats">
-          <input type="radio" name="zone" id="zone-beats" value="beats">
+          <input type="radio" name="zone" id="zone-beats" value="beats" />
           <label for="zone-beats">.beats</label>
         </span>
         <span class="setting-zone" id="setting-republican">
-          <input type="radio" name="zone" id="zone-republican" value="republican">
+          <input
+            type="radio"
+            name="zone"
+            id="zone-republican"
+            value="republican"
+          />
           <label for="zone-republican">républicain</label>
         </span>
-      </span>
-    </div>
+      </div>
+    </form>
   </body>
 </html>

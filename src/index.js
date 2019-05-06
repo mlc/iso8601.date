@@ -52,6 +52,7 @@ const setup = () => {
   let intervalId;
 
   const date = document.getElementById('date');
+  const time = document.getElementById('time');
 
   const padBeats = beatStr => {
     switch (beatStr.length) {
@@ -65,21 +66,19 @@ const setup = () => {
   };
 
   const updateDisplay = () => {
-    let time;
+    let dateStr;
+    let timeStr;
     if (beats) {
       const beatsNow = LocalTime.now(tz).toNanoOfDay() / 86400000000;
       const beatStr = beatsNow.toFixed(2);
-      time = `@${padBeats(beatStr)}`;
+      dateStr = `@${padBeats(beatStr)}`;
     } else if (republican) {
-      time = republicanNow().join('<br>');
+      [dateStr, timeStr] = republicanNow();
     } else {
-      time = fmt.format(ZonedDateTime.now(tz));
+      dateStr = fmt.format(ZonedDateTime.now(tz));
     }
-    if (republican) {
-      date.innerHTML = time;
-    } else {
-      date.textContent = time;
-    }
+    date.textContent = dateStr;
+    time.textContent = timeStr;
   };
 
   const localZone = ZoneId.systemDefault();
