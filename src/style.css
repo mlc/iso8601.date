@@ -17,7 +17,7 @@ body {
 }
 body {
   height: 100vh;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   color: #111;
   background-color: #ddd;
   display: flex;
@@ -28,6 +28,8 @@ body.beats {
 }
 .spacer {
   flex-grow: 1;
+  align-self: center;
+  width: 0;
 }
 #date,
 #time {
@@ -52,10 +54,10 @@ body.beats #date {
   flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
-  align-items: center;
+  align-items: baseline;
 }
 #settings li {
-  margin: 0px 4px;
+  margin: 4px;
 }
 select,
 option {
