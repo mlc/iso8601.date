@@ -49,7 +49,7 @@ body.beats #date {
   padding: 4px;
   font-size: 10pt;
   margin: 0px;
-  flex-direction: horizontal;
+  flex-direction: row;
   flex-wrap: wrap;
   list-style-type: none;
   align-items: center;
