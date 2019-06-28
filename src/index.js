@@ -9,7 +9,7 @@ import {
   ZoneId,
   ZoneOffset,
 } from 'js-joda';
-import 'js-joda-timezone';
+import 'js-joda-timezone/dist/js-joda-timezone-10-year-range';
 import difference from 'lodash/difference';
 import isUndefined from 'lodash/isUndefined';
 
