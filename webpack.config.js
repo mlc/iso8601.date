@@ -1,3 +1,4 @@
+const autoprefixer = require('autoprefixer');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -6,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    require('autoprefixer'),
+    autoprefixer,
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
@@ -20,6 +21,9 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.js', '.ts', '.json'],
+  },
   module: {
     rules: [
       {
@@ -31,7 +35,7 @@ module.exports = {
         loader: 'base64-inline-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
