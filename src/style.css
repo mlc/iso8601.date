@@ -59,6 +59,15 @@ body.beats #date {
 #settings li {
   margin: 4px;
 }
+#settings li:last-of-type {
+  margin-left: auto;
+  align-self: center;
+}
+#gh-logo {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #111;
+}
 select,
 option {
   font-family: inherit;
