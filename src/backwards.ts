@@ -1,6 +1,6 @@
 // awk ' /^Link/ { print "\"" $3 "\"," } ' backward
 
-export default [
+const backwardZones: string[] = [
   'Africa/Asmera',
   'Africa/Timbuktu',
   'America/Argentina/ComodRivadavia',
@@ -120,3 +120,5 @@ export default [
   'W-SU',
   'Zulu',
 ];
+
+export default backwardZones;

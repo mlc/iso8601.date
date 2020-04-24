@@ -11,8 +11,8 @@
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
     "pretty": "prettier --write src/*.js",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
+    "lint": "eslint --ext .ts,.js src",
+    "lint:fix": "eslint --fix .ts,.js src",
     "check-types": "tsc"
   },
   "devDependencies": {
@@ -20,7 +20,10 @@
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
+    "@types/lodash": "^4.14.150",
     "@types/webpack-env": "^1.15.2",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.29.0",
     "autoprefixer": "^9.3.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.1.0",
@@ -29,11 +32,12 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.1",
     "cssnano": "^4.1.7",
-    "eslint": "^5.9.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-compat": "^2.6.3",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.20.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.1.0",
     "husky": "^1.2.0",
@@ -62,7 +66,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "eslint"
+      "eslint --ext .js,.ts"
     ]
   },
   "browserslist": [

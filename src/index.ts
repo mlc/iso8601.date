@@ -2,7 +2,6 @@ import {
   ChronoField,
   DateTimeFormatter,
   DateTimeFormatterBuilder,
-  IsoChronology,
   LocalTime,
   ResolverStyle,
   ZonedDateTime,
@@ -42,19 +41,18 @@ const fmt = new DateTimeFormatterBuilder()
   .appendLiteral(':')
   .appendValue(ChronoField.SECOND_OF_MINUTE, 2)
   .appendOffsetId()
-  .toFormatter(ResolverStyle.STRICT)
-  .withChronology(IsoChronology.INSTANCE);
+  .toFormatter(ResolverStyle.STRICT);
 
 const setup = () => {
-  let tz = ZoneId.UTC;
-  let beats = false;
-  let republican = false;
-  let intervalId;
+  let tz: ZoneId = ZoneId.UTC;
+  let beats: boolean = false;
+  let republican: boolean = false;
+  let intervalId: number | undefined;
 
-  const date = document.getElementById('date');
-  const time = document.getElementById('time');
+  const date = document.getElementById('date') as HTMLDivElement;
+  const time = document.getElementById('time') as HTMLDivElement;
 
-  const padBeats = beatStr => {
+  const padBeats = (beatStr: string): string => {
     switch (beatStr.length) {
       case 4:
         return `00${beatStr}`;
@@ -65,9 +63,9 @@ const setup = () => {
     }
   };
 
-  const updateDisplay = () => {
-    let dateStr;
-    let timeStr;
+  const updateDisplay = (): void => {
+    let dateStr: string;
+    let timeStr: string | null = null;
     if (beats) {
       const beatsNow = LocalTime.now(tz).toNanoOfDay() / 86400000000;
       const beatStr = beatsNow.toFixed(2);
@@ -82,11 +80,13 @@ const setup = () => {
   };
 
   const localZone = ZoneId.systemDefault();
-  const localSetting = document.getElementById('setting-local');
+  const localSetting = document.getElementById(
+    'setting-local'
+  ) as HTMLLIElement;
   if (localZone && localZone.id() !== 'SYSTEM') {
     localSetting.getElementsByTagName('label')[0].textContent = localZone.id();
   } else {
-    localSetting.parentNode.removeChild(localSetting);
+    localSetting.parentNode?.removeChild(localSetting);
   }
 
   const zoneNames = difference(
@@ -94,22 +94,26 @@ const setup = () => {
     backwards,
     extraBackwards
   ).sort((a, b) => a.localeCompare(b));
-  const customZoneSelector = document.getElementById('custom-zone-selector');
-  zoneNames.forEach(zone => {
+  const customZoneSelector = document.getElementById(
+    'custom-zone-selector'
+  ) as HTMLSelectElement;
+  zoneNames.forEach((zone) => {
     const elt = document.createElement('option');
     elt.textContent = zone;
     elt.setAttribute('value', zone);
     customZoneSelector.appendChild(elt);
   });
 
-  const startInterval = ms => {
+  const startInterval = (ms: number) => {
     if (!isUndefined(intervalId)) {
       window.clearInterval(intervalId);
     }
     intervalId = window.setInterval(updateDisplay, ms);
   };
 
-  const formElements = document.getElementById('settings-wrapper');
+  const formElements = document.getElementById(
+    'settings-wrapper'
+  ) as HTMLFormElement;
   const updateZone = () => {
     const { value } = formElements.zone;
     const old864 = beats || republican;
@@ -151,18 +155,14 @@ const setup = () => {
     updateZone();
   });
 
-  [...document.querySelectorAll("#settings input[type='radio']")].forEach(elt =>
-    elt.addEventListener('change', updateZone)
-  );
+  document
+    .querySelectorAll<HTMLInputElement>("#settings input[type='radio']")
+    .forEach((elt) => elt.addEventListener('change', updateZone));
 
   updateZone();
 };
 
-if (
-  document.attachEvent
-    ? document.readyState === 'complete'
-    : document.readyState !== 'loading'
-) {
+if (document.readyState !== 'loading') {
   setup();
 } else {
   document.addEventListener('DOMContentLoaded', setup);
