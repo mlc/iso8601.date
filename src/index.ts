@@ -162,10 +162,14 @@ const setup = () => {
   updateZone();
 };
 
-if (document.readyState !== 'loading') {
+if (/^loaded|^i|^c/.test(document.readyState)) {
   setup();
 } else {
-  document.addEventListener('DOMContentLoaded', setup);
+  const onReady = () => {
+    setup();
+    document.removeEventListener('DOMContentLoaded', onReady);
+  };
+  document.addEventListener('DOMContentLoaded', onReady);
 }
 
 gauges();
