@@ -31,9 +31,9 @@ body.beats {
   align-self: center;
   width: 0;
 }
-#date,
-#time {
+#date {
   align-self: center;
+  text-align: center;
   font-size: 7vw;
 }
 body.beats #date {

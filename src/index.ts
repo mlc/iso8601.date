@@ -50,7 +50,6 @@ const setup = () => {
   let intervalId: number | undefined;
 
   const date = document.getElementById('date') as HTMLDivElement;
-  const time = document.getElementById('time') as HTMLDivElement;
 
   const padBeats = (beatStr: string): string => {
     switch (beatStr.length) {
@@ -75,8 +74,22 @@ const setup = () => {
     } else {
       dateStr = fmt.format(ZonedDateTime.now(tz));
     }
-    date.textContent = dateStr;
-    time.textContent = timeStr;
+    if (timeStr) {
+      const nodes = date.childNodes;
+      if (nodes.length === 3) {
+        nodes[0].textContent = dateStr;
+        nodes[2].textContent = timeStr;
+      } else {
+        nodes.forEach((node) => node.remove());
+        date.append(
+          document.createTextNode(dateStr),
+          document.createElement('br'),
+          document.createTextNode(timeStr)
+        );
+      }
+    } else {
+      date.textContent = dateStr;
+    }
   };
 
   const localZone = ZoneId.systemDefault();
