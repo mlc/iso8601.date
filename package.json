@@ -20,6 +20,7 @@
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
+    "@types/floreal": "^1.1.0",
     "@types/lodash": "^4.14.150",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
