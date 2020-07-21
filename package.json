@@ -58,7 +58,7 @@
     "@js-joda/core": "3.0.0",
     "@js-joda/timezone": "2.3.0",
     "floreal": "^1.1.1",
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.19"
   },
   "husky": {
     "hooks": {
