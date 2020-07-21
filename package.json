@@ -29,7 +29,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.1.0",
     "base64-inline-loader": "^1.1.1",
-    "browserslist": "4.12.0",
+    "browserslist": "4.13.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.1",
     "cssnano": "^4.1.7",
@@ -55,8 +55,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.2",
-    "@js-joda/core": "2.0.0",
-    "@js-joda/timezone": "2.2.0",
+    "@js-joda/core": "3.0.0",
+    "@js-joda/timezone": "2.3.0",
     "floreal": "^1.1.1",
     "lodash": "^4.17.13"
   },
