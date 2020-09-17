@@ -903,10 +903,10 @@
     log-update "^2.3.0"
     strip-ansi "^3.0.1"
 
-"@js-joda/core@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-3.0.0.tgz#716fda28440882a790533b9bc5e33ec8bf9a7803"
-  integrity sha512-iKVNfsPt5ehdhDAynTlQe+XmCn+njMYq/AR0BDl7sqn8oGERIDO+zjPWwYJ344BTnkZc9bHXSU3WbtM3lpMD8A==
+"@js-joda/core@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-3.1.0.tgz#756216eb23bda2438a64fb919cb571c479bc8a74"
+  integrity sha512-6tzM0xVXtEFjihUxaILrbJ9jNWNeYvCy3PWzSmlR1Rl0E+MYIN8lyaa3+xYrUX0AbPSFcj7ApdD06hpqVyNpMA==
 
 "@js-joda/timezone@2.3.0":
   version "2.3.0"

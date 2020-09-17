@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.2",
-    "@js-joda/core": "3.0.0",
+    "@js-joda/core": "3.1.0",
     "@js-joda/timezone": "2.3.0",
     "floreal": "^1.1.1",
     "lodash": "^4.17.19"
