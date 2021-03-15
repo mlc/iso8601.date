@@ -1,20 +1,12 @@
-import {
-  ChronoField,
-  DateTimeFormatter,
-  DateTimeFormatterBuilder,
-  LocalTime,
-  ResolverStyle,
-  ZonedDateTime,
-  ZoneId,
-  ZoneOffset,
-} from '@js-joda/core';
-import '@js-joda/timezone/dist/js-joda-timezone-10-year-range';
+import { Temporal } from 'proposal-temporal';
 import difference from 'lodash/difference';
 import isUndefined from 'lodash/isUndefined';
 
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
 import './style.css';
+import tzs from './tzs.json';
+import { haveTz, nanoOfDay, padBeats } from './utils';
 
 const extraBackwards = [
   'US/Pacific-New',
@@ -31,47 +23,29 @@ const extraBackwards = [
   'PST8PDT',
 ];
 
-const fmt = new DateTimeFormatterBuilder()
-  .append(DateTimeFormatter.ISO_LOCAL_DATE)
-  .appendLiteral('T')
-  .appendValue(ChronoField.HOUR_OF_DAY, 2)
-  .appendLiteral(':')
-  .appendValue(ChronoField.MINUTE_OF_HOUR, 2)
-  .appendLiteral(':')
-  .appendValue(ChronoField.SECOND_OF_MINUTE, 2)
-  .appendOffsetId()
-  .toFormatter(ResolverStyle.STRICT);
-
 const setup = () => {
-  let tz: ZoneId = ZoneId.UTC;
+  let tz: Temporal.TimeZone = Temporal.TimeZone.from('UTC');
   let beats: boolean = false;
   let republican: boolean = false;
   let intervalId: number | undefined;
 
   const date = document.getElementById('date') as HTMLDivElement;
 
-  const padBeats = (beatStr: string): string => {
-    switch (beatStr.length) {
-      case 4:
-        return `00${beatStr}`;
-      case 5:
-        return `0${beatStr}`;
-      default:
-        return beatStr;
-    }
-  };
-
   const updateDisplay = (): void => {
     let dateStr: string;
     let timeStr: string | null = null;
     if (beats) {
-      const beatsNow = LocalTime.now(tz).toNanoOfDay() / 86400000000;
+      const beatsNow = nanoOfDay(Temporal.now.plainTimeISO(tz)) / 86400000000;
       const beatStr = beatsNow.toFixed(2);
       dateStr = `@${padBeats(beatStr)}`;
     } else if (republican) {
       [dateStr, timeStr] = republicanNow();
     } else {
-      dateStr = fmt.format(ZonedDateTime.now(tz));
+      dateStr = Temporal.now.zonedDateTimeISO(tz).toString({
+        smallestUnit: 'second',
+        timeZoneName: 'never',
+        calendarName: 'never',
+      });
     }
     if (timeStr) {
       const nodes = date.childNodes;
@@ -91,21 +65,19 @@ const setup = () => {
     }
   };
 
-  const localZone = ZoneId.systemDefault();
+  const localZone = Temporal.now.timeZone();
   const localSetting = document.getElementById(
     'setting-local'
   ) as HTMLLIElement;
-  if (localZone && localZone.id() !== 'SYSTEM') {
-    localSetting.getElementsByTagName('label')[0].textContent = localZone.id();
+  if (localZone && localZone.id !== 'SYSTEM') {
+    localSetting.getElementsByTagName('label')[0].textContent = localZone.id;
   } else {
     localSetting.parentNode?.removeChild(localSetting);
   }
 
-  const zoneNames = difference(
-    ZoneId.getAvailableZoneIds(),
-    backwards,
-    extraBackwards
-  ).sort((a, b) => a.localeCompare(b));
+  const zoneNames = difference(tzs as string[], backwards, extraBackwards)
+    .filter(haveTz)
+    .sort((a, b) => a.localeCompare(b));
   const customZoneSelector = document.getElementById(
     'custom-zone-selector'
   ) as HTMLSelectElement;
@@ -131,7 +103,7 @@ const setup = () => {
     const old864 = beats || republican;
 
     if (value === 'UTC') {
-      tz = ZoneId.UTC;
+      tz = Temporal.TimeZone.from('UTC');
       beats = false;
       republican = false;
     } else if (value === 'local') {
@@ -139,11 +111,11 @@ const setup = () => {
       beats = false;
       republican = false;
     } else if (value === 'custom') {
-      tz = ZoneId.of(formElements['custom-zone'].value);
+      tz = Temporal.TimeZone.from(formElements['custom-zone'].value);
       beats = false;
       republican = false;
     } else if (value === 'beats') {
-      tz = ZoneOffset.ofHours(1);
+      tz = Temporal.TimeZone.from('+01:00');
       beats = true;
       republican = false;
     } else if (value === 'republican') {
