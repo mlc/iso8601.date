@@ -8,7 +8,7 @@ module.exports = {
   },
   extends: ['airbnb-typescript/base', 'plugin:compat/recommended', 'prettier'],
   parserOptions: {
-    project: './tsconfig.json',
+    project: './tsconfig.lint.json',
   },
   rules: {
     'import/prefer-default-export': 0,
