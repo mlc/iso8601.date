@@ -947,10 +947,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.46.tgz#0fb6bfbbeabd7a30880504993369c4bf1deab1fe"
   integrity sha512-laIjwTQaD+5DukBZaygQ79K1Z0jb1bPEMRrkXSLjtCcZm+abyp5YbrqpSLzD42FwWW6gK/aS4NYpJ804nG2brg==
 
-"@types/floreal@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@types/floreal/-/floreal-1.1.0.tgz#2b6b93087b376ceea9a300545b230070fffd540f"
-  integrity sha512-W00unLkp/o17voruutTklfVhA2PXJ3dQU1svGkPodsTH4haqOAyj25OORljU1sGWFuyIj3G4P330If0Zfh47rA==
+"@types/floreal@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/floreal/-/floreal-1.1.1.tgz#59893026224d29ca14566db8684d2a9b4a8f4bbd"
+  integrity sha512-QXdtF7utu6B8uUBbPixNJvX5lWsynLgroOuhYJNjvvFpg0Kz2iSQpyA259VHEmRLjqtE/BW8Wk8BYKB1D30hew==
 
 "@types/html-minifier-terser@^5.0.0":
   version "5.1.1"
