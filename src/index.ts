@@ -9,11 +9,10 @@ import {
   ZoneOffset,
 } from '@js-joda/core';
 import '@js-joda/timezone/dist/js-joda-timezone-10-year-range';
-import difference from 'lodash/difference';
-import isUndefined from 'lodash/isUndefined';
 
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
+import { difference } from './util';
 import './style.css';
 
 const extraBackwards = [
@@ -117,7 +116,7 @@ const setup = () => {
   });
 
   const startInterval = (ms: number) => {
-    if (!isUndefined(intervalId)) {
+    if (intervalId !== undefined) {
       window.clearInterval(intervalId);
     }
     intervalId = window.setInterval(updateDisplay, ms);
@@ -151,7 +150,7 @@ const setup = () => {
       beats = false;
       republican = true;
     }
-    if ((beats || republican) !== old864 || isUndefined(intervalId)) {
+    if ((beats || republican) !== old864 || intervalId === undefined) {
       startInterval(beats || republican ? 864 : 1000);
     }
     if (beats) {
