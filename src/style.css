@@ -19,7 +19,7 @@ body {
   height: 100vh;
   font-family: 'PT Sans', sans-serif;
   color: #111;
-  background-color: #ddd;
+  background-color: #dddddd;
   display: flex;
   flex-direction: column;
 }

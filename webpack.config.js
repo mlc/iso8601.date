@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   plugins: [
@@ -14,6 +15,16 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[fullhash].css',
       chunkFilename: '[id].[fullhash].css',
+    }),
+    new WebpackPwaManifest({
+      filename: '[name].[hash].webmanifest',
+      name: 'iso8601.date',
+      background_color: '#dddddd',
+      start_url: '/',
+      orientation: 'any',
+      display: 'standalone',
+      fingerprints: true,
+      publicPath: '/',
     }),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,

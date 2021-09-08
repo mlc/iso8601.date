@@ -50,6 +50,7 @@
     "webpack": "^5.25.1",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^4.1.0",
+    "webpack-pwa-manifest": "^4.3.0",
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
