@@ -1,0 +1,21 @@
+diff --git a/node_modules/webpack-pwa-manifest/index.d.ts b/node_modules/webpack-pwa-manifest/index.d.ts
+index 5ac9a17..0531843 100644
+--- a/node_modules/webpack-pwa-manifest/index.d.ts
++++ b/node_modules/webpack-pwa-manifest/index.d.ts
+@@ -2,12 +2,13 @@
+ // Project: https://github.com/arthurbergmz/webpack-pwa-manifest
+ // Definitions by: Arthur A. Bergamaschi <https://www.github.com/arthurbergmz>
+ 
+-import { Plugin } from 'webpack';
++import { Compiler } from 'webpack';
+ 
+-export = WebpackPwaManifest
++export = WebpackPwaManifest;
+ 
+-declare class WebpackPwaManifest extends Plugin {
++declare class WebpackPwaManifest {
+     constructor(options: WebpackPwaManifest.ManifestOptions);
++    apply: (compiler: Compiler) => void;
+ }
+ 
+ declare namespace WebpackPwaManifest {

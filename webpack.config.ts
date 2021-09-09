@@ -1,11 +1,12 @@
-const autoprefixer = require('autoprefixer');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
+import autoprefixer from 'autoprefixer';
+import { resolve } from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import WorkboxPlugin from 'workbox-webpack-plugin';
+import WebpackPwaManifest from 'webpack-pwa-manifest';
+import type { Configuration as WebpackConfig } from 'webpack';
 
-module.exports = {
+const config: WebpackConfig = {
   plugins: [
     autoprefixer,
     new HtmlWebpackPlugin({
@@ -33,7 +34,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
     clean: true,
   },
   resolve: {
@@ -66,3 +67,5 @@ module.exports = {
     ],
   },
 };
+
+export default config;
