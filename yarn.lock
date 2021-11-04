@@ -1257,15 +1257,15 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@js-joda/core@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-4.0.0.tgz#c3ea4a8cdafaa8395b96ebfd6e098f5dd42eaad5"
-  integrity sha512-zKQgmIya9kA8fc4SuIknXGgT2cwX92MjrWyHWsC/pccSl4gXacYpdYgtc2tIj0VOe63Vp6DDKvTO6UpuyQ+tXg==
+"@js-joda/core@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-4.3.1.tgz#1df9f197d060f1eb087a895a5e33adb7f12b58fc"
+  integrity sha512-oeaetlodcqVsiZDxnEcqsbs+sXBkASxua0mXs5OXuPQXz3/wdPTMlxwfQ4z2HKcOik3S9voW3QJkp/KLWDhvRQ==
 
-"@js-joda/timezone@2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.6.0.tgz#ac3c66ea3b338b92028ad420e0d5df2ea362a8f9"
-  integrity sha512-Onz6+SMNinwMiWupkEiyAAjQeAlcAh1QcgsAKRug25XsKrT2dVBAWO1N8YuSahnQ5YecJ3JRxKZzYwXzn+XB6A==
+"@js-joda/timezone@2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.10.0.tgz#4161988b6e08d457a5783f6f3a3ba01138512d80"
+  integrity sha512-A6kyVXA60ZRPUI1fQPxxBfhsDRTXLOm12JGc9AtrQmFWgJkBeUYmoDYFEc6vso4I8XMbZyJVrMYUnjTbne6Ynw==
 
 "@mdn/browser-compat-data@^3.3.14":
   version "3.3.14"
