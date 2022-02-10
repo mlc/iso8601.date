@@ -3,6 +3,9 @@
 set -ex
 
 yarn prod
+for fn in dist/*.map; do
+  aws s3 cp "$fn" s3://iso8601.date/ --content-type 'application/json' --cache-control 'public'
+done
 aws s3 cp dist/main.*.css s3://iso8601.date/ --content-type 'text/css' --cache-control 'public, max-age=31556952, immutable'
 aws s3 cp dist/main.*.js s3://iso8601.date/ --content-type 'application/javascript' --cache-control 'public, max-age=31556952, immutable'
 aws s3 cp dist/workbox-*.js s3://iso8601.date/ --content-type 'application/javascript' --cache-control 'public, max-age=31556952, immutable'

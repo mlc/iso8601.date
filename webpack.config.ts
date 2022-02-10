@@ -66,6 +66,7 @@ const config: WebpackConfig = {
       },
     ],
   },
+  devtool: 'source-map',
 };
 
 export default config;
