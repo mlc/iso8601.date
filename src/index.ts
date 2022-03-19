@@ -14,6 +14,7 @@ import NavigatorLanguagesParser from 'navigator-languages-parser';
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
 import { difference } from './util';
+import l10n from './l10n.json';
 import './style.css';
 
 const extraBackwards = [
@@ -42,29 +43,18 @@ const fmt = new DateTimeFormatterBuilder()
   .appendOffsetId()
   .toFormatter(ResolverStyle.STRICT);
 
-const l10n: Record<string, { utc: string; gh?: string }> = {
-  en: {
-    utc: 'Coordinated Universal Time',
-    gh: 'View the source code for this project on GitHub',
-  },
-  es: {
-    utc: 'Tiempo universal coordinado',
-    gh: 'Ver el código fuente de este proyecto en GitHub',
-  },
-  fr: {
-    utc: 'Temps universel coordonné',
-  },
-};
-
 const localize = () => {
   const zoneUtcAbbr = document.getElementById('zone-utc-abbr') as HTMLElement;
   const ghLink = document.getElementById('gh-link') as HTMLAnchorElement;
 
-  const lang = NavigatorLanguagesParser.parseLanguages(Object.keys(l10n), 'en');
+  const lang = NavigatorLanguagesParser.parseLanguages(
+    Object.keys(l10n),
+    'en'
+  ) as keyof typeof l10n;
   const strings = l10n[lang];
 
   zoneUtcAbbr.title = strings.utc;
-  if (strings.gh) {
+  if ('gh' in strings) {
     ghLink.title = strings.gh;
   }
   document.body.lang = lang;
