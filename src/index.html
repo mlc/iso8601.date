@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>iso8601.date</title>
@@ -14,7 +14,9 @@
         <li id="setting-utc">
           <input type="radio" name="zone" id="zone-utc" value="UTC" checked />
           <label for="zone-utc"
-            ><abbr title="Coordinated Universal Time">UTC</abbr></label
+            ><abbr id="zone-utc-abbr" title="Coordinated Universal Time"
+              >UTC</abbr
+            ></label
           >
         </li>
         <li id="setting-local">
@@ -40,6 +42,7 @@
         </li>
         <li id="gh-logo-wrapper">
           <a
+            id="gh-link"
             href="https://github.com/mlc/iso8601.date"
             title="View the source code for this project on GitHub"
           >

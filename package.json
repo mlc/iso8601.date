@@ -64,7 +64,8 @@
     "@babel/runtime": "^7.14.5",
     "@js-joda/core": "5.2.0",
     "@js-joda/timezone": "2.12.0",
-    "floreal": "^1.1.1"
+    "floreal": "^1.1.1",
+    "navigator-languages-parser": "^0.10.10"
   },
   "husky": {
     "hooks": {
