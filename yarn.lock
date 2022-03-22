@@ -1481,6 +1481,11 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
+"@types/navigator-languages-parser@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@types/navigator-languages-parser/-/navigator-languages-parser-0.10.0.tgz#8ef7fca0a30819614bb07d6fe6b6fecc542a5a0d"
+  integrity sha512-xjhJVuSv8BQ3Z+54YeVcPEO4pG+Uuz3HIMhhHn1utf/oD5VMwSrrT7sLf647uCtiUBHYYNQ8xRudjZk0W5l57A==
+
 "@types/node@*":
   version "16.7.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.13.tgz#86fae356b03b5a12f2506c6cf6cd9287b205973f"
