@@ -62,11 +62,11 @@
     "workbox-webpack-plugin": "^6.4.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.5",
+    "@babel/runtime": "^7.17.9",
     "@js-joda/core": "5.2.0",
     "@js-joda/timezone": "2.12.0",
     "floreal": "^1.1.1",
-    "navigator-languages-parser": "^0.10.10"
+    "navigator-languages-parser": "^0.10.13"
   },
   "husky": {
     "hooks": {
