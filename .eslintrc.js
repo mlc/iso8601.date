@@ -6,7 +6,12 @@ module.exports = {
     browser: true,
     commonjs: true,
   },
-  extends: ['airbnb-typescript/base', 'plugin:compat/recommended', 'prettier'],
+  extends: [
+    'plugin:import/recommended',
+    'airbnb-typescript/base',
+    'plugin:compat/recommended',
+    'prettier',
+  ],
   parserOptions: {
     project: './tsconfig.lint.json',
   },

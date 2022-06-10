@@ -9,7 +9,8 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "lib": ["dom", "ES2018"]
+    "lib": ["dom", "ES2018"],
+    "skipLibCheck": true
   },
   "include": ["src", "webpack.config.ts"],
   "exclude": ["node_modules"]
