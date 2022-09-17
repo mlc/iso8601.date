@@ -1,4 +1,3 @@
-import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -8,7 +7,6 @@ import type { Configuration as WebpackConfig } from 'webpack';
 
 const config: WebpackConfig = {
   plugins: [
-    autoprefixer,
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
@@ -48,7 +46,7 @@ const config: WebpackConfig = {
       },
       {
         test: /\.(woff2?|ttf|eot)$/,
-        loader: 'base64-inline-loader',
+        type: 'asset/inline',
       },
       {
         test: /\.(js|ts)$/,
