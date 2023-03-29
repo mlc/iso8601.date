@@ -24,7 +24,7 @@
     "@babel/preset-typescript": "7.21.0",
     "@types/floreal": "1.1.1",
     "@types/navigator-languages-parser": "0.10.0",
-    "@types/node": "16.18.21",
+    "@types/node": "18.15.11",
     "@types/webpack": "5.28.1",
     "@types/webpack-env": "1.18.0",
     "@typescript-eslint/eslint-plugin": "5.57.0",
