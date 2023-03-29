@@ -1524,10 +1524,10 @@
   resolved "https://registry.yarnpkg.com/@types/navigator-languages-parser/-/navigator-languages-parser-0.10.0.tgz#8ef7fca0a30819614bb07d6fe6b6fecc542a5a0d"
   integrity sha512-xjhJVuSv8BQ3Z+54YeVcPEO4pG+Uuz3HIMhhHn1utf/oD5VMwSrrT7sLf647uCtiUBHYYNQ8xRudjZk0W5l57A==
 
-"@types/node@*", "@types/node@16.18.21":
-  version "16.18.21"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.21.tgz#061e3b51668f74bf3aaa44450dcf0acd625841f7"
-  integrity sha512-TassPGd0AEZWA10qcNnXnSNwHlLfSth8XwUaWc3gTSDmBz/rKb613Qw5qRf6o2fdRBrLbsgeC9PMZshobkuUqg==
+"@types/node@*", "@types/node@18.15.11":
+  version "18.15.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
+  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
