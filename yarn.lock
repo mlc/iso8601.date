@@ -1375,15 +1375,15 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@js-joda/core@5.5.2":
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.5.2.tgz#3d7953004d70adf6a0a4140a78c948de758284e0"
-  integrity sha512-retLUN4TwCJ0QJDi9OCJwYVaXAz93NeOkEtEQL98M2bykBOxmURlP0YlfsuE46kItOOVZIWRYC3KsSLhQ1R2Qw==
+"@js-joda/core@5.5.3":
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.5.3.tgz#defac1f9af382178104ad327af1ec97446039752"
+  integrity sha512-7dqNYwG8gCt4hfg5PKgM7xLEcgSBcx/UgC92OMnhMmvAnq11QzDFPrxUkNR/u5kn17WWLZ8beZ4A3Qrz4pZcmQ==
 
-"@js-joda/timezone@2.17.2":
-  version "2.17.2"
-  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.17.2.tgz#599e7e66ce7ddd048130a075ec8b68ab69c062c3"
-  integrity sha512-QZR6ymcQfnb6cqNvzEVcxLqAjYyS7Grs8IR6rJvv/bH+nTb1HI2zGXSYZZdL5ly+hEHOeWFx4BtaJ9jaY7m6QQ==
+"@js-joda/timezone@2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.18.0.tgz#b12128cbfc7d15c2f7180db55cb4719b85ab05f1"
+  integrity sha512-NjNDwj2AuFzVgW1XvKq3t0oH/BwK+Zsu6TiCsDkQZFx4h3W3oKgmUJUKleMBHMFJvh7sQRTK9hSqK/6izBuyAA==
 
 "@mdn/browser-compat-data@^5.2.34", "@mdn/browser-compat-data@^5.2.47":
   version "5.2.49"
