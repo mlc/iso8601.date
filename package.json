@@ -59,7 +59,7 @@
     "workbox-webpack-plugin": "7.0.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.24.1",
+    "@babel/runtime": "7.24.4",
     "@js-joda/core": "5.6.2",
     "@js-joda/timezone": "2.18.3",
     "floreal": "1.1.1",
