@@ -1,19 +1,9 @@
-import {
-  ChronoField,
-  DateTimeFormatter,
-  DateTimeFormatterBuilder,
-  LocalTime,
-  ResolverStyle,
-  ZonedDateTime,
-  ZoneId,
-  ZoneOffset,
-} from '@js-joda/core';
-import '@js-joda/timezone/dist/js-joda-timezone-10-year-range';
+import { Temporal } from 'temporal-polyfill';
 import NavigatorLanguagesParser from 'navigator-languages-parser';
 
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
-import { difference } from './util';
+import { difference, timeToNs } from './util';
 import l10n from './l10n.json';
 import './style.css';
 
@@ -31,17 +21,6 @@ const extraBackwards = [
   'MST7MDT',
   'PST8PDT',
 ];
-
-const fmt = new DateTimeFormatterBuilder()
-  .append(DateTimeFormatter.ISO_LOCAL_DATE)
-  .appendLiteral('T')
-  .appendValue(ChronoField.HOUR_OF_DAY, 2)
-  .appendLiteral(':')
-  .appendValue(ChronoField.MINUTE_OF_HOUR, 2)
-  .appendLiteral(':')
-  .appendValue(ChronoField.SECOND_OF_MINUTE, 2)
-  .appendOffsetId()
-  .toFormatter(ResolverStyle.STRICT);
 
 const localize = () => {
   const zoneUtcAbbr = document.getElementById('zone-utc-abbr') as HTMLElement;
@@ -61,7 +40,7 @@ const localize = () => {
 };
 
 const setup = () => {
-  let tz: ZoneId = ZoneId.UTC;
+  let tz: Temporal.TimeZoneLike = 'UTC';
   let beats: boolean = false;
   let republican: boolean = false;
   let intervalId: number | undefined;
@@ -85,13 +64,16 @@ const setup = () => {
     let dateStr: string;
     let timeStr: string | null = null;
     if (beats) {
-      const beatsNow = LocalTime.now(tz).toNanoOfDay() / 86400000000;
+      const beatsNow = timeToNs(Temporal.Now.plainTimeISO(tz)) / 86400000000;
       const beatStr = beatsNow.toFixed(2);
       dateStr = `@${padBeats(beatStr)}`;
     } else if (republican) {
       [dateStr, timeStr] = republicanNow();
     } else {
-      dateStr = fmt.format(ZonedDateTime.now(tz));
+      dateStr = Temporal.Now.instant().toString({
+        timeZone: tz,
+        smallestUnit: 'seconds',
+      });
     }
     if (timeStr) {
       const nodes = date.childNodes;
@@ -111,18 +93,14 @@ const setup = () => {
     }
   };
 
-  const localZone = ZoneId.systemDefault();
+  const localZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const localSetting = document.getElementById(
     'setting-local'
   ) as HTMLLIElement;
-  if (localZone && localZone.id() !== 'SYSTEM') {
-    localSetting.getElementsByTagName('label')[0].textContent = localZone.id();
-  } else {
-    localSetting.parentNode?.removeChild(localSetting);
-  }
+  localSetting.getElementsByTagName('label')[0].textContent = localZone;
 
   const zoneNames = difference(
-    ZoneId.getAvailableZoneIds(),
+    Intl.supportedValuesOf('timeZone'),
     backwards,
     extraBackwards
   ).sort((a, b) => a.localeCompare(b));
@@ -151,7 +129,7 @@ const setup = () => {
     const old864 = beats || republican;
 
     if (value === 'UTC') {
-      tz = ZoneId.UTC;
+      tz = 'UTC';
       beats = false;
       republican = false;
     } else if (value === 'local') {
@@ -159,11 +137,11 @@ const setup = () => {
       beats = false;
       republican = false;
     } else if (value === 'custom') {
-      tz = ZoneId.of(formElements['custom-zone'].value);
+      tz = formElements['custom-zone'].value;
       beats = false;
       republican = false;
     } else if (value === 'beats') {
-      tz = ZoneOffset.ofHours(1);
+      tz = 'Etc/GMT+1';
       beats = true;
       republican = false;
     } else if (value === 'republican') {

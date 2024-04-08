@@ -1421,16 +1421,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@js-joda/core@5.6.2":
-  version "5.6.2"
-  resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-5.6.2.tgz#1885d10daa404cea2bd55575f910ab3bbe6c33d7"
-  integrity sha512-ow4R+7C24xeTjiMTTZ4k6lvxj7MRBqvqLCQjThQff3RjOmIMokMP20LNYVFhGafJtUx/Xo2Qp4qU8eNoTVH0SA==
-
-"@js-joda/timezone@2.18.3":
-  version "2.18.3"
-  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.18.3.tgz#3d3d9907557493c77f6e829a583e64db8c15792a"
-  integrity sha512-e+tZFIHWQJoR7ZVyGo5K/i+pPIAvFiEuq8F0CLFINSA7csSIK1dd4mtB2tb43e1/NUmDsnwo9FlhRlyBR9EzoQ==
-
 "@mdn/browser-compat-data@^5.2.34", "@mdn/browser-compat-data@^5.3.13":
   version "5.3.15"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.3.15.tgz#324f147950aed202fc331e38620b6a17bddcc458"
@@ -5360,6 +5350,18 @@ temp-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-2.0.0.tgz#bde92b05bdfeb1516e804c9c00ad45177f31321e"
   integrity sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==
+
+temporal-polyfill@0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/temporal-polyfill/-/temporal-polyfill-0.2.3.tgz#57792fb074a0c1d6bcba6295b30de11d3d51122d"
+  integrity sha512-7ZJRc7wq/1XjrOQYkkNpgo2qfE9XLrUU8D/DS+LAC/T0bYqZ46rW6dow0sOTXTPZS4bwer8bD/0OyuKQBfA3yw==
+  dependencies:
+    temporal-spec "^0.2.0"
+
+temporal-spec@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/temporal-spec/-/temporal-spec-0.2.0.tgz#f5a2aca4e08232764871ec7c3ec0498b699b3f42"
+  integrity sha512-r1AT0XdEp8TMQ13FLvOt8mOtAxDQsRt2QU5rSWCA7YfshddU651Y1NHVrceLANvixKdf9fYO8B/S9fXHodB7HQ==
 
 tempy@^0.6.0:
   version "0.6.0"

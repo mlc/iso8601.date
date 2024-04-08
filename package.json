@@ -60,10 +60,9 @@
   },
   "dependencies": {
     "@babel/runtime": "7.24.4",
-    "@js-joda/core": "5.6.2",
-    "@js-joda/timezone": "2.18.3",
     "floreal": "1.1.1",
-    "navigator-languages-parser": "0.10.13"
+    "navigator-languages-parser": "0.10.13",
+    "temporal-polyfill": "0.2.3"
   },
   "lint-staged": {
     "*.{js,ts,css,md,json}": [
@@ -74,6 +73,6 @@
     ]
   },
   "browserslist": [
-    "cover 95% in US, not dead, not ie 11"
+    "defaults"
   ]
 }
