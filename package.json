@@ -34,7 +34,7 @@
     "browserslist": "4.23.1",
     "css-loader": "7.1.2",
     "cssnano": "6.1.2",
-    "eslint": "8.57.0",
+    "eslint": "9.8.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-prettier": "9.1.0",
