@@ -18,20 +18,20 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@babel/core": "7.27.1",
-    "@babel/plugin-transform-runtime": "7.27.1",
+    "@babel/core": "7.27.4",
+    "@babel/plugin-transform-runtime": "7.27.4",
     "@babel/preset-env": "7.27.2",
     "@babel/preset-typescript": "7.27.1",
     "@types/floreal": "1.1.3",
     "@types/navigator-languages-parser": "0.10.2",
-    "@types/node": "22.15.18",
+    "@types/node": "22.15.32",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "autoprefixer": "10.4.21",
     "babel-loader": "10.0.0",
-    "browserslist": "4.24.5",
+    "browserslist": "4.25.0",
     "css-loader": "7.1.2",
     "cssnano": "7.0.7",
     "eslint": "8.57.1",
@@ -43,17 +43,17 @@
     "html-loader": "5.1.0",
     "html-webpack-plugin": "5.6.3",
     "husky": "9.1.7",
-    "lint-staged": "16.0.0",
+    "lint-staged": "16.1.2",
     "mini-css-extract-plugin": "2.9.2",
     "patch-package": "8.0.0",
-    "postcss": "8.5.3",
+    "postcss": "8.5.6",
     "postcss-loader": "8.1.1",
     "postinstall-postinstall": "2.1.0",
     "prettier": "3.5.3",
     "style-loader": "4.0.0",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
-    "webpack": "5.99.8",
+    "webpack": "5.99.9",
     "webpack-cli": "6.0.1",
     "webpack-pwa-manifest": "4.3.0",
     "workbox-webpack-plugin": "7.3.0"
@@ -76,5 +76,5 @@
   "browserslist": [
     "cover 95% in US, not dead, not ie 11"
   ],
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.2"
 }
