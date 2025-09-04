@@ -1,7 +1,7 @@
-diff --git a/node_modules/webpack-pwa-manifest/index.d.ts b/node_modules/webpack-pwa-manifest/index.d.ts
-index 5ac9a17..0531843 100644
---- a/node_modules/webpack-pwa-manifest/index.d.ts
-+++ b/node_modules/webpack-pwa-manifest/index.d.ts
+diff --git a/index.d.ts b/index.d.ts
+index 5ac9a17a0eaf34623410f76aad544be30f621381..0531843b589c3cda813462ad822adb889c396ac4 100644
+--- a/index.d.ts
++++ b/index.d.ts
 @@ -2,12 +2,13 @@
  // Project: https://github.com/arthurbergmz/webpack-pwa-manifest
  // Definitions by: Arthur A. Bergamaschi <https://www.github.com/arthurbergmz>
