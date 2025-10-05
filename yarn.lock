@@ -5285,7 +5285,7 @@ __metadata:
     typescript: "npm:5.9.2"
     webpack: "npm:5.101.3"
     webpack-cli: "npm:6.0.1"
-    webpack-pwa-manifest: "npm:4.3.0"
+    webpack-pwa-manifest: "patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch"
     workbox-webpack-plugin: "npm:7.3.0"
   languageName: unknown
   linkType: soft
@@ -8212,6 +8212,17 @@ __metadata:
     jimp: "npm:0.16.1"
     mime: "npm:2.4.6"
   checksum: 10c0/03a354635e6fa3cbf1ae23eb4453f81e2f434c20b2259b6aaab71ffbec1e849066b376aeea01183e1d1ec0086043d6288a227e15e4fd838ff9c9e708beee5e37
+  languageName: node
+  linkType: hard
+
+"webpack-pwa-manifest@patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch":
+  version: 4.3.0
+  resolution: "webpack-pwa-manifest@patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch::version=4.3.0&hash=cb8245"
+  dependencies:
+    css-color-names: "npm:1.0.1"
+    jimp: "npm:0.16.1"
+    mime: "npm:2.4.6"
+  checksum: 10c0/2fe4a4980913592f93a6e5f89db75e1709ccd339b426e0d03ee72bc73f0da1a25f0f0a3f2738c5638928518ccea02f97f43e177ae273ab5a348ab4fa0963841b
   languageName: node
   linkType: hard
 
