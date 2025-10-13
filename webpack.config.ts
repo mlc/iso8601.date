@@ -4,6 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import WorkboxPlugin from 'workbox-webpack-plugin';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import type { Configuration as WebpackConfig } from 'webpack';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const config: WebpackConfig = {
   plugins: [
@@ -52,7 +53,12 @@ const config: WebpackConfig = {
         test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'swc-loader',
+          options: {
+            env: {
+              targets: 'defaults',
+            },
+          },
         },
       },
       {
@@ -65,6 +71,12 @@ const config: WebpackConfig = {
     ],
   },
   devtool: 'source-map',
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({ minify: TerserPlugin.swcMinify, terserOptions: {} }),
+    ],
+  },
 };
 
 export default config;

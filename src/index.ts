@@ -8,9 +8,9 @@ import {
   ZoneId,
   ZoneOffset,
 } from '@js-joda/core';
-import '@js-joda/timezone/dist/js-joda-timezone-10-year-range';
-import NavigatorLanguagesParser from 'navigator-languages-parser';
+import '@js-joda/timezone/dist/js-joda-timezone-10-year-range.esm';
 
+import * as NavigatorLanguagesParser from './navigator-languages-parser';
 import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
 import { difference } from './util';
