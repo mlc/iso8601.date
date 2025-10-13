@@ -19,7 +19,7 @@
   "devDependencies": {
     "@swc/core": "1.13.5",
     "@types/floreal": "1.1.3",
-    "@types/node": "22.18.8",
+    "@types/node": "22.18.10",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
@@ -37,7 +37,7 @@
     "html-loader": "5.1.0",
     "html-webpack-plugin": "5.6.4",
     "husky": "9.1.7",
-    "lint-staged": "16.2.3",
+    "lint-staged": "16.2.4",
     "mini-css-extract-plugin": "2.9.4",
     "postcss": "8.5.6",
     "postcss-loader": "8.2.0",
@@ -48,7 +48,7 @@
     "terser-webpack-plugin": "5.3.14",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "webpack": "5.102.0",
+    "webpack": "5.102.1",
     "webpack-cli": "6.0.1",
     "webpack-pwa-manifest": "patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch",
     "workbox-webpack-plugin": "7.3.0"
