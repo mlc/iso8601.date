@@ -17,17 +17,17 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@swc/core": "1.13.5",
+    "@swc/core": "1.15.3",
     "@types/floreal": "1.1.3",
-    "@types/node": "22.18.10",
+    "@types/node": "22.19.1",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
-    "autoprefixer": "10.4.21",
-    "browserslist": "4.26.3",
+    "autoprefixer": "10.4.22",
+    "browserslist": "4.28.0",
     "css-loader": "7.1.2",
-    "cssnano": "7.1.1",
+    "cssnano": "7.1.2",
     "eslint": "8.57.1",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "18.0.0",
@@ -35,9 +35,9 @@
     "eslint-plugin-compat": "4.2.0",
     "eslint-plugin-import": "2.32.0",
     "html-loader": "5.1.0",
-    "html-webpack-plugin": "5.6.4",
+    "html-webpack-plugin": "5.6.5",
     "husky": "9.1.7",
-    "lint-staged": "16.2.4",
+    "lint-staged": "16.2.7",
     "mini-css-extract-plugin": "2.9.4",
     "postcss": "8.5.6",
     "postcss-loader": "8.2.0",
@@ -48,10 +48,10 @@
     "terser-webpack-plugin": "5.3.14",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "webpack": "5.102.1",
+    "webpack": "5.103.0",
     "webpack-cli": "6.0.1",
     "webpack-pwa-manifest": "patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch",
-    "workbox-webpack-plugin": "7.3.0"
+    "workbox-webpack-plugin": "7.4.0"
   },
   "dependencies": {
     "@js-joda/core": "5.6.5",
@@ -69,5 +69,5 @@
   "browserslist": [
     "defaults"
   ],
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.12.0"
 }
