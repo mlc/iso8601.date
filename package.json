@@ -19,7 +19,7 @@
   "devDependencies": {
     "@swc/core": "1.15.3",
     "@types/floreal": "1.1.3",
-    "@types/node": "22.19.1",
+    "@types/node": "24.10.9",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
