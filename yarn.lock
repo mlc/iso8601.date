@@ -1740,19 +1740,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@js-joda/core@npm:5.6.5":
-  version: 5.6.5
-  resolution: "@js-joda/core@npm:5.6.5"
-  checksum: 10c0/bad9d67736eb7dfbc99f09b2f485c63c4d64cad2661648be88028e777f93769767c41d6019c0a35ba6f55a1b9846666f3528ae8746496a9f1ed9b60eade174be
+"@js-joda/core@npm:5.7.0":
+  version: 5.7.0
+  resolution: "@js-joda/core@npm:5.7.0"
+  checksum: 10c0/09f6dd077d070593b9546a02c65cf1e013563235b585902437dac6fae967deb5a5041b6863046d6713b6ea3d98f12b5b1f16737afc4cb1e14bdbaa4adce64c1a
   languageName: node
   linkType: hard
 
-"@js-joda/timezone@npm:2.22.0":
-  version: 2.22.0
-  resolution: "@js-joda/timezone@npm:2.22.0"
+"@js-joda/timezone@npm:2.23.0":
+  version: 2.23.0
+  resolution: "@js-joda/timezone@npm:2.23.0"
   peerDependencies:
     "@js-joda/core": ">=1.11.0"
-  checksum: 10c0/fc3401489fd6dd2c8974d45a6e719772df18852030d0afb3a832a67fa2240f6175052600cb73fb576483cf046fca2a8cb7f32ec4dfddeb21b3c18d658134412c
+  checksum: 10c0/305d8c0ca38fe4a2aee3f26cd537db8465bdc86efa0597e2fb6f1f745b4876bfb9fb82cc42aa8bf001952ab632b80632066576c23cec8dbedb9c355eb0621f92
   languageName: node
   linkType: hard
 
@@ -4568,7 +4568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
+"glob@npm:^10.2.2, glob@npm:^10.3.10":
   version: 10.4.5
   resolution: "glob@npm:10.4.5"
   dependencies:
@@ -5319,8 +5319,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "iso8601.date@workspace:."
   dependencies:
-    "@js-joda/core": "npm:5.6.5"
-    "@js-joda/timezone": "npm:2.22.0"
+    "@js-joda/core": "npm:5.7.0"
+    "@js-joda/timezone": "npm:2.23.0"
     "@swc/core": "npm:1.15.3"
     "@types/floreal": "npm:1.1.3"
     "@types/node": "npm:22.19.1"
@@ -5992,17 +5992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minizlib@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "minizlib@npm:3.0.1"
-  dependencies:
-    minipass: "npm:^7.0.4"
-    rimraf: "npm:^5.0.5"
-  checksum: 10c0/82f8bf70da8af656909a8ee299d7ed3b3372636749d29e105f97f20e88971be31f5ed7642f2e898f00283b68b701cc01307401cdc209b0efc5dd3818220e5093
-  languageName: node
-  linkType: hard
-
-"minizlib@npm:^3.1.0":
+"minizlib@npm:^3.0.1, minizlib@npm:^3.1.0":
   version: 3.1.0
   resolution: "minizlib@npm:3.1.0"
   dependencies:
@@ -7232,17 +7222,6 @@ __metadata:
   bin:
     rimraf: bin.js
   checksum: 10c0/9cb7757acb489bd83757ba1a274ab545eafd75598a9d817e0c3f8b164238dd90eba50d6b848bd4dcc5f3040912e882dc7ba71653e35af660d77b25c381d402e8
-  languageName: node
-  linkType: hard
-
-"rimraf@npm:^5.0.5":
-  version: 5.0.10
-  resolution: "rimraf@npm:5.0.10"
-  dependencies:
-    glob: "npm:^10.3.7"
-  bin:
-    rimraf: dist/esm/bin.mjs
-  checksum: 10c0/7da4fd0e15118ee05b918359462cfa1e7fe4b1228c7765195a45b55576e8c15b95db513b8466ec89129666f4af45ad978a3057a02139afba1a63512a2d9644cc
   languageName: node
   linkType: hard
 
