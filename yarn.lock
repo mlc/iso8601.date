@@ -1740,10 +1740,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@js-joda/core@npm:5.7.0":
-  version: 5.7.0
-  resolution: "@js-joda/core@npm:5.7.0"
-  checksum: 10c0/09f6dd077d070593b9546a02c65cf1e013563235b585902437dac6fae967deb5a5041b6863046d6713b6ea3d98f12b5b1f16737afc4cb1e14bdbaa4adce64c1a
+"@js-joda/core@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@js-joda/core@npm:6.0.0"
+  checksum: 10c0/2f509543c541fde71287e09495da6ed5e058664886c8950857091ada237d27b0a2284f1df5ec54e290593ebe46ec76f6e26d14573b9e4e03ca6d801021d3f44f
   languageName: node
   linkType: hard
 
@@ -5318,7 +5318,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "iso8601.date@workspace:."
   dependencies:
-    "@js-joda/core": "npm:5.7.0"
+    "@js-joda/core": "npm:6.0.0"
     "@js-joda/timezone": "npm:2.23.0"
     "@swc/core": "npm:1.15.11"
     "@types/floreal": "npm:1.1.3"
