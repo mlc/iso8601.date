@@ -15,6 +15,7 @@ import backwards from './backwards';
 import { paris, now as republicanNow } from './republican';
 import { difference } from './util';
 import l10n from './l10n.json';
+// @ts-ignore
 import './style.css';
 
 const extraBackwards = [
