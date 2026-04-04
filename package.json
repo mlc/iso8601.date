@@ -47,7 +47,7 @@
     "swc-loader": "0.2.7",
     "terser-webpack-plugin": "5.3.16",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "webpack": "5.104.1",
     "webpack-cli": "6.0.1",
     "webpack-pwa-manifest": "patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch",
