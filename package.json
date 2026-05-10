@@ -54,8 +54,8 @@
     "workbox-webpack-plugin": "7.4.1"
   },
   "dependencies": {
-    "@js-joda/core": "6.0.0",
-    "@js-joda/timezone": "2.25.0",
+    "@js-joda/core": "6.0.1",
+    "@js-joda/timezone": "2.25.1",
     "floreal": "1.1.1"
   },
   "lint-staged": {
