@@ -17,17 +17,17 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@swc/core": "1.15.21",
+    "@swc/core": "1.15.33",
     "@types/floreal": "1.1.3",
-    "@types/node": "24.12.2",
+    "@types/node": "24.12.3",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
-    "autoprefixer": "10.4.27",
+    "autoprefixer": "10.5.0",
     "browserslist": "4.28.2",
     "css-loader": "7.1.4",
-    "cssnano": "7.1.4",
+    "cssnano": "7.1.9",
     "eslint": "8.57.1",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "18.0.0",
@@ -35,23 +35,23 @@
     "eslint-plugin-compat": "4.2.0",
     "eslint-plugin-import": "2.32.0",
     "html-loader": "5.1.0",
-    "html-webpack-plugin": "5.6.6",
+    "html-webpack-plugin": "5.6.7",
     "husky": "9.1.7",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.0.4",
     "mini-css-extract-plugin": "2.10.2",
-    "postcss": "8.5.8",
+    "postcss": "8.5.10",
     "postcss-loader": "8.2.1",
     "postinstall-postinstall": "2.1.0",
-    "prettier": "3.8.1",
+    "prettier": "3.8.3",
     "style-loader": "4.0.0",
     "swc-loader": "0.2.7",
-    "terser-webpack-plugin": "5.4.0",
+    "terser-webpack-plugin": "5.6.0",
     "ts-node": "10.9.2",
-    "typescript": "6.0.2",
-    "webpack": "5.105.4",
+    "typescript": "6.0.3",
+    "webpack": "5.106.2",
     "webpack-cli": "7.0.2",
     "webpack-pwa-manifest": "patch:webpack-pwa-manifest@npm%3A4.3.0#~/.yarn/patches/webpack-pwa-manifest-npm-4.3.0-8e6d2ff6b5.patch",
-    "workbox-webpack-plugin": "7.4.0"
+    "workbox-webpack-plugin": "7.4.1"
   },
   "dependencies": {
     "@js-joda/core": "6.0.0",
@@ -69,5 +69,5 @@
   "browserslist": [
     "defaults"
   ],
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }
