@@ -16,7 +16,7 @@ body {
   margin: 0px;
 }
 body {
-  height: 100vh;
+  height: 100dvh;
   font-family: 'PT Sans', sans-serif;
   color: #111;
   background-color: #dddddd;
@@ -34,12 +34,12 @@ body.beats {
 #date {
   align-self: center;
   text-align: center;
-  font-size: 7vw;
+  font-size: 7lvw;
 }
 body.beats #date {
   color: #9d0;
   font-family: 'Space Mono', monospace;
-  font-size: 20vw;
+  font-size: 20lvw;
 }
 #settings-wrapper {
   align-self: stretch;
