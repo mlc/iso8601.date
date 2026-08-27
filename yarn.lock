@@ -1747,19 +1747,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@js-joda/core@npm:6.0.1":
-  version: 6.0.1
-  resolution: "@js-joda/core@npm:6.0.1"
-  checksum: 10c0/d65dcca509a60d70e492e922902b6687594e8b61bcc3f3b3fc9a56b36dbd8bfec8b94dd1daf6a697506edb3080c6e106a03f23930020c83200a869a7d0d2958d
+"@js-joda/core@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@js-joda/core@npm:6.1.0"
+  checksum: 10c0/7713d867e08f3f57e368a38820fbdfebe848cb073cf405edfe2ad04c9fcf55d664b07ed331ffd775a4f192aa7888588a4718ca827e29d58c0be093eec1d6c40d
   languageName: node
   linkType: hard
 
-"@js-joda/timezone@npm:2.25.1":
-  version: 2.25.1
-  resolution: "@js-joda/timezone@npm:2.25.1"
+"@js-joda/timezone@npm:2.25.2":
+  version: 2.25.2
+  resolution: "@js-joda/timezone@npm:2.25.2"
   peerDependencies:
     "@js-joda/core": ">=5.7.0"
-  checksum: 10c0/0547ae1d9dfde05ae36211d18782ce2311abc0c24e9da8dcee663a29a4b0c6347797815beff75a29be57ee5f36b8d531a377ae84d4050250a5777cf5e6364d9c
+  checksum: 10c0/fcacd7c8ea65f233f6a53b9dc5820ead90b12c3d19334a9874dcc0eeb903772354d6bd18e6602dcaf0fa4dca24cafecb75666b0d068b37bb4f6addd4c6fc3ada
   languageName: node
   linkType: hard
 
@@ -5404,8 +5404,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "iso8601.date@workspace:."
   dependencies:
-    "@js-joda/core": "npm:6.0.1"
-    "@js-joda/timezone": "npm:2.25.1"
+    "@js-joda/core": "npm:6.1.0"
+    "@js-joda/timezone": "npm:2.25.2"
     "@swc/core": "npm:1.15.41"
     "@types/floreal": "npm:1.1.3"
     "@types/node": "npm:24.13.2"
