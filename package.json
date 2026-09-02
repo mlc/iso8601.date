@@ -23,7 +23,7 @@
     "autoprefixer": "10.5.4",
     "browserslist": "4.28.8",
     "css-loader": "7.1.4",
-    "cssnano": "7.1.9",
+    "cssnano": "9.0.2",
     "html-loader": "5.1.0",
     "html-webpack-plugin": "5.6.8",
     "husky": "9.1.7",
