@@ -1671,12 +1671,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@js-joda/timezone@npm:2.25.2":
-  version: 2.25.2
-  resolution: "@js-joda/timezone@npm:2.25.2"
+"@js-joda/timezone@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@js-joda/timezone@npm:3.0.0"
   peerDependencies:
     "@js-joda/core": ">=5.7.0"
-  checksum: 10c0/fcacd7c8ea65f233f6a53b9dc5820ead90b12c3d19334a9874dcc0eeb903772354d6bd18e6602dcaf0fa4dca24cafecb75666b0d068b37bb4f6addd4c6fc3ada
+  checksum: 10c0/9a6a2cf70437ee0f9499498508fec60563b040313d26c0455cc65b3457534d6101b9c87a0429a39f9c38c6ad095e49e2709b3711eba8971c9ebc88baf78a46bd
   languageName: node
   linkType: hard
 
@@ -4321,7 +4321,7 @@ __metadata:
   resolution: "iso8601.date@workspace:."
   dependencies:
     "@js-joda/core": "npm:6.1.0"
-    "@js-joda/timezone": "npm:2.25.2"
+    "@js-joda/timezone": "npm:3.0.0"
     "@swc/core": "npm:1.16.12"
     "@types/floreal": "npm:1.1.3"
     "@types/node": "npm:24.19.0"
